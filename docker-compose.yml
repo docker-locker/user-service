@@ -1,0 +1,12 @@
+user:
+  build: "."
+
+haproxy:
+  image: haproxy:1.6.2
+  links:
+    - user
+  ports:
+    - "80:80"
+    - "70:70"
+  volumes:
+    - ./configs/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg

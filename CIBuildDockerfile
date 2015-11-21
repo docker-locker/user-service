@@ -1,0 +1,10 @@
+# Create an image with gradle and project dependencies cached so that builds will be faster
+
+FROM williamyeh/java8
+MAINTAINER Ajay
+RUN mkdir /var/tmp/code
+COPY gradle /var/tmp/code/gradle
+ADD build.gradle /var/tmp/code/
+ADD gradlew /var/tmp/code/
+WORKDIR /var/tmp/code
+RUN ./gradlew && ./gradlew idea
