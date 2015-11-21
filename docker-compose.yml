@@ -2,7 +2,7 @@ user:
   image: dev.registry:5000/user:latest
 
 haproxy:
-  image: haproxy:1.6.2
+  image: dev.registry:5000/haproxy:1.6.2
   links:
     - user
   ports:
