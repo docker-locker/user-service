@@ -9,6 +9,6 @@ public class UserServiceTest {
     @Test
     public void shouldGetDummyUsers(){
         UserService userService = new UserService();
-        assertEquals(3, userService.getUsers().size());
+        assertEquals(2, userService.getUsers().size());
     }
 }
