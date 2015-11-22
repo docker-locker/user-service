@@ -1,4 +1,4 @@
-docker run --rm -it -v $PWD:/var/tmp/build \
+docker run --rm -i -v $PWD:/var/tmp/build \
  -w /var/tmp/build docker-world/cibuild:latest \
   ./gradlew build
 
